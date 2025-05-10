@@ -1,5 +1,5 @@
 
-![ascii-text-art](https://github.com/zelhajou/42-cub3D/assets/39954629/9ec803f3-de19-4868-a50a-6b2e4a83523d)
+![ascii-text-art](https://github.com/Dambylik/42_cub3D/blob/main/cub3de.png)
 
 
 # cub3D
@@ -69,8 +69,8 @@ Developed by [id Software](https://en.wikipedia.org/wiki/Id_Software) and publis
 
 | | |
 |:-------------------------:|:-------------------------:|
-| <img width="1230" alt="Screen Shot 2024-05-09 at 12 22 47 PM" src="https://github.com/zelhajou/42-cub3D/assets/39954629/e4879374-df66-42eb-9b81-9eac22a27089"> | <img width="1245" alt="Screen Shot 2024-05-09 at 12 24 31 PM" src="https://github.com/zelhajou/42-cub3D/assets/39954629/319554ac-ebe6-4dd3-91c5-495c857f407b">
-| <img width="1346" alt="Screen Shot 2024-05-09 at 12 47 45 PM" src="https://github.com/zelhajou/42-cub3D/assets/39954629/f60b06a5-2171-4a9a-b132-85832746dab7"> | <img width="1288" alt="Screen Shot 2024-05-09 at 12 40 14 PM" src="https://github.com/zelhajou/42-cub3D/assets/39954629/ca7bd27b-4f3f-4b9b-aa6f-3cf9c8537031"> |
+| <img width="1230" alt="Screen Shot 2024-05-09 at 12 22 47 PM" src="https://github.com/Dambylik/42_cub3D/blob/main/Screenshot%20From%202025-05-10%2019-27-48.png"> | <img width="1245" alt="Screen Shot 2024-05-09 at 12 24 31 PM" src="https://github.com/Dambylik/42_cub3D/blob/main/Screenshot%20From%202025-05-10%2019-27-25.png">
+| <img width="1346" alt="Screen Shot 2024-05-09 at 12 47 45 PM" src="https://github.com/Dambylik/42_cub3D/blob/main/Screenshot%20From%202025-05-10%2019-24-07.png"> | <img width="1288" alt="Screen Shot 2024-05-09 at 12 40 14 PM" src="https://github.com/Dambylik/42_cub3D/blob/main/Screenshot%20From%202025-05-10%2019-23-39.png"> |
 
 
 ## Team Development Steps
@@ -169,72 +169,6 @@ cub3d/
 │  
 └── textures
 
-```
-## I. Project Setup
-
-### Map requirements
-
-1. **Map Elements**: The map must contain only the following elements:
-    - 0: Empty space
-    - 1: Wall
-2. **Map Shape**: The map must be surrounded by walls (1) on all sides. The map's shape can be a rectangle, but it can also have holes inside it.
-3. **Valid Characters**: Only the map elements mentioned above and spaces are valid characters in the map. Any other character is considered invalid.
-4. Starting Position: The map must have a starting position for the player. This starting position must be represented by one of the following characters:
-    - N: North
-    - S: South
-    - W: West
-    - E: East
-
-### Parsing and Storing the Configuration File
-
-To parse the configuration file, we'll need to:
-
-1. **Read the File**: Open and read the configuration file line by line.
-2. **Parse the Data**: Extract relevant settings from each line of the file.
-3. **Store the Data**: Store the settings in appropriate data structures for later use.
-
-Here's a basic outline of the steps involved in parsing the configuration file:
-
-1. **Open File**: Open the configuration file for reading using the `open` system call.
-2. **Read Lines**: Read each line of the file using the `get_next_line` function.
-3. **Parse Data**: Parse the data from each line to extract relevant settings (e.g., textures, colors, map layout).
-
-To store the configuration settings, we'll define a `t_config` structure to hold the extracted data:
-
-```c
-typedef struct s_config
-{
-    char    *no_texture;
-    char    *we_texture;
-    char    *so_texture;
-    char    *ea_texture;
-    int     floor_color;
-    int     ceiling_color;
-    char    **map;
-    char    **map_copy;
-    size_t  map_width;
-    size_t  map_height;
-    int     map_started;
-}    t_config;
-```
-
-The `t_config` structure contains fields to store the configuration settings extracted from the configuration file. We'll use this structure to store the textures, colors, and map layout.
-
-```bash
-└── src
-    ├── parsing
-    │   ├── color
-    │   │   ├── color_parsing.c
-    │   │   └── color_validation.c
-    │   ├── config
-    │   │   ├── config_file_parsing.c
-    │   │   └── config_validation.c
-    │   ├── map
-    │   │   ├── map_parsing.c
-    │   │   └── map_validation.c
-    │   └── texture
-    │       ├── texture_parsing.c
-    │       └── texture_validation.c
 ```
 
 ## Resources
